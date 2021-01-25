@@ -11,6 +11,7 @@
 // Historique du fichier:
 /*************************************************/
 #include <iostream>
+#include <ctime>
 using namespace std;
 #include "../include/JeuNombreAdeviner.h"
 
@@ -23,8 +24,13 @@ using namespace std;
 
 void InitJoueur(TJoueur& joueurAcreer, string un_nom)
 {
-    //A COMPLETER
+    joueurAcreer.nbPartiesJouees = 0;
+    joueurAcreer.nbPartiesGagnees = 0;
+    joueurAcreer.nbTentatives = 0;
+    joueurAcreer.nom = un_nom;
 }
+
+
 
 
 // Nom :TirerNombreMystere
@@ -33,7 +39,8 @@ void InitJoueur(TJoueur& joueurAcreer, string un_nom)
 
 int TirerNombreMystere()
 {
-    //A COMPLETER
+        int srand();
+        srand(time(NULL));
         return -1;
 }
 
