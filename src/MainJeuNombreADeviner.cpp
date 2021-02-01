@@ -14,9 +14,14 @@ using namespace std;
 
 #include "../include/JeuNombreADeviner.h"
 
+
 int main()
 {
     cout << "Vous allez jouer pour deviner un nombre secret" << endl;
+    TJoueur joueur1;
+    InitJoueur(joueur1, "j");
+    JouerPartie(joueur1, 5);
+
 
     return 0;
 }

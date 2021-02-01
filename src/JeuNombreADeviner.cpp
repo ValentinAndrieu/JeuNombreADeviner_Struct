@@ -39,9 +39,10 @@ void InitJoueur(TJoueur& joueurAcreer, string un_nom)
 
 int TirerNombreMystere()
 {
-        int srand();
-        srand(time(NULL));
-        return -1;
+        int rand();
+        int nombreADeviner;
+        nombreADeviner = rand()%11;
+        return nombreADeviner;
 }
 
 
@@ -54,7 +55,28 @@ int TirerNombreMystere()
 
 void JouerPartie(TJoueur& un_joueur, int nombreADeviner)
 {
-    //A COMPLETER
+    int cpt = 0;
+    int nombreSaisi;
+    cout << "Entrez un chiffre entre 1 et 10" << endl;
+    cin >> nombreSaisi;
+    while (cpt != 4, cpt+1)
+    {
+        if (nombreSaisi > nombreADeviner)
+        {
+            cout << "C'est moins" << endl;
+        }else if (nombreSaisi < nombreADeviner)
+        {
+            cout << "C'est plus" << endl;
+        }
+    }
+    if (cpt == 4)
+    {
+        cout << "C'est perdu!!" << endl;
+    }
+    if (nombreSaisi == nombreADeviner)
+    {
+        cout << "C'est gagné!!" << "Vous avez réussi en" << cpt << "essais" << endl;
+    }
 }
 
 
